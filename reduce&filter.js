@@ -19,7 +19,13 @@ and return average age of this array
 
 Ex: avgAge(persons) => 41.2
 */
+function avgAge(persons) 
+{
+ var out;
+out=persons.reduce()
 
+  return out
+}
 
 /*
 2
@@ -31,6 +37,18 @@ and return the longerst full name
 
 Ex: longestName(persons) => 'Soso Al-Amora'
 */
+function  longestName(arr){
+   var ruselt =arr.reduce(function(str,elm,i){
+   //str=arr[0].name.first+""+arr[0].name.last
+   elm=arr[i].name.first+""+arr[i].name.last
+   if (str.length > elm.length) {
+      return elm=str
+      }return elm
+   }
+  ) 
+  return ruselt
+}
+
 
 
 /*
@@ -53,6 +71,18 @@ and return number times that this char repeat inside the string
 
 Ex: repeatChar("hello world",w) => 1
 */
+function repeatChar(string,char){
+  string= string.toLowerCase()
+  string= string.split("")
+  var result = string.reduce(function(num,str){
+
+if ( str===char){
+ ++num
+}return num
+
+  } ,0)
+  return result
+}
 
 
 /*
@@ -76,7 +106,13 @@ and return an array of even number only
 
 Ex: evenOnly([1,8,6,4]) => [8,6,4]
 */
+function evenOnly(array){
+  var result =array.filter(num =>num%2===0)
+  
+  return result
+}
 
+ 
 
 /*
 7
@@ -87,6 +123,12 @@ and return an array of these number that is a mutiply by 4
 
 Ex: multiFour([1,8,6,4]) => [8,4]
 */
+function multiFour(array){
+  var result =array.filter(num =>num%4===0)
+  
+  return result
+}
+
 
 
 /*
@@ -101,6 +143,13 @@ and return an array of these string that contain this char
 Ex: containChar(["hello","world"],w) => ["world"]
 Ex: containChar(["hello","world"],l) => ["hello","world"]
 */
+function  containChar(string,char){
+  var ruselt = string.filter(str=>str===char)
+  return str
+   
+  }
+  
+
 
 
 /*
